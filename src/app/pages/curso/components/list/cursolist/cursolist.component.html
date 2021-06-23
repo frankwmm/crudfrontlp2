@@ -1,0 +1,30 @@
+<p>Yimi works!</p>
+<br>
+<div class="container">
+
+  <button class="btn btn-primary" (click)="newCurso()"> Nuevo Curso</button>
+
+<table  class="table">
+  <thead class="table-warning">
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Detail</th>
+    <th scope="col">Date Created</th>
+    <th scope="col">Date Updated</th>
+    <th scope="col">Opciones</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of cursos">
+      <th scope="row">{{a.id}}</th>
+      <td>{{a.nombre}}</td>
+      <td>{{a.detalle}}</td>
+      <td>{{a.created_at}}</td>
+      <td>{{a.updated_at}}</td>
+      <td>
+        <button class="btn-danger" (click)="delete(a.id)">Eliminar</button>
+        <button class="btn-primary" (click)="edit(a.id)">Editar</button>    
+    </tbody>
+  </table>
+  </div>

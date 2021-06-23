@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{title}}</h4>
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="cursoForm">
+      <div class="form-group">
+        <label for="dateOfBirth">Nombre</label>
+        <div class="input-group">
+  
+          <input id="dateOfBirth" class="form-control" placeholder="nombre" name="dp" formControlName="nombre">
+  
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="dateOfBirth2">Detalle</label>
+        <div class="input-group">
+  
+          <input id="dateOfBirth2" class="form-control" placeholder="detalle" name="df" formControlName="detalle">
+  
+        </div>
+      </div>
+    </form>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="save()" [disabled]="cursoForm.invalid">Save</button>
+    </div>
+  </div>

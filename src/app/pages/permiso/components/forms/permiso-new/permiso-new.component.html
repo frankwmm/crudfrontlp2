@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{title}}</h4>
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="permisoForm">
+      <div class="form-group">
+        <label for="dateOfBirth">Nombre del Permiso</label>
+        <div class="input-group">
+  
+          <input id="dateOfBirth" class="form-control" placeholder="Nombre" name="dp" formControlName="nom_permiso">
+  
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="dateOfBirth2">Descripcion del Permiso</label>
+        <div class="input-group">
+  
+          <input id="dateOfBirth2" class="form-control" placeholder="Descripcion" name="df" formControlName="desc_permiso">
+  
+        </div>
+      </div>
+    </form>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="save()" [disabled]="permisoForm.invalid">Save</button>
+    </div>
+  </div>

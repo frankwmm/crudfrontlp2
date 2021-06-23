@@ -1,0 +1,35 @@
+<br>
+<br>
+<br><br>
+<br>
+
+<div class="container">
+
+  <button class="btn btn-primary" (click)="newProduct()"> Nuevo Producto</button>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nme</th>
+      <th scope="col">Detail</th>
+      <th scope="col">Date Created</th>
+      <th scope="col">Date Updated</th>
+      <th scope="col"> Opciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of products">
+      <th scope="row">{{p.id}}</th>
+      <td>{{p.name}}</td>
+      <td>{{p.detail}}</td>
+      <td>{{p.created_at}}</td>
+      <td>{{p.updated_at}}</td>
+      <td><button class="btn-danger" (click)="delete(p.id)">Eliminar</button>
+        <button class="btn-primary" (click)="edit(p.id)">Editar</button>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
