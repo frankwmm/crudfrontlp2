@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Product} from '../../../models/product';
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
+import { Product } from "../../../models/product";
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: "app-product-list",
+  templateUrl: "./product-list.component.html",
+  styleUrls: ["./product-list.component.css"],
 })
 export class ProductListComponent implements OnInit {
   @Input() products: Product[];
@@ -12,11 +12,9 @@ export class ProductListComponent implements OnInit {
   @Output() onDelete: EventEmitter<number> = new EventEmitter();
   @Output() onEdit: EventEmitter<number> = new EventEmitter();
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public newProduct(): void {
     this.onNew.emit(true);
