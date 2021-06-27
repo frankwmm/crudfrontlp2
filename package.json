@@ -12,8 +12,8 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": "12.14.0",
-    "npm": "6.13.4"
+    "node": "14.17.0",
+    "npm": "6.14.13"
   },
   "private": true,
   "dependencies": {
