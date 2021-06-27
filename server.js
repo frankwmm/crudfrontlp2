@@ -7,4 +7,4 @@ app.get("/*", function (req, res) {
     path.join(__dirname + "/dist/argon-dashboard-angular/index.html")
   );
 });
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 5000);
